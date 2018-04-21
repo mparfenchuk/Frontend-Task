@@ -27,16 +27,6 @@ const walletReducer = (state = initialState, action) => {
         })
     }
 
-    if (action.type === 'SET_TRANSACTION'){
-        return Object.assign({}, state, {
-            blockNumber: state.blockNumber,
-            ethBalance: state.ethBalance,
-            tokenBalance: state.tokenBalance,
-            address: state.address,
-            seed: state.seed
-        })
-    }
-
     if (action.type === 'WALLET_DESTROY'){
         return Object.assign({}, state, {
             blockNumber: 0,
